@@ -27,7 +27,7 @@ namespace Homework_4._8
 
          int rowOne = ClassFor2DArray.SizeRow(nameOne);
          int columnOne = ClassFor2DArray.SizeColumn(nameOne);
-        
+
          string pathOne = Path.GetFullPath(nameFileOne);
 
          double minOne = 0;
