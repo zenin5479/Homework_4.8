@@ -21,6 +21,7 @@ namespace Homework_4._8
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
+         // Заменить все на целочисленный двумерный массив int[,]
          string nameOne = "A";
          string nameFileOne = "a.txt";
          string nameFileFour = "finish.txt";
