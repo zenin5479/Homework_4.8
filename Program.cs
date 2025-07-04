@@ -25,37 +25,32 @@ namespace Homework_4._8
          string nameFileOne = "a.txt";
          string nameFileFour = "finish.txt";
 
-         int rowOne = VariousMethods.SizeRow(nameOne);
-         int columnOne = VariousMethods.SizeColumn(nameOne);
+         int rowOne = ClassFor2DArray.SizeRow(nameOne);
+         int columnOne = ClassFor2DArray.SizeColumn(nameOne);
         
          string pathOne = Path.GetFullPath(nameFileOne);
 
          double minOne = 0;
-         double[,] sourceOne = VariousMethods.VvodArray(pathOne, nameFileOne);
+         double[,] sourceOne = ClassFor2DArray.VvodArray(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileOne);
          }
          else
          {
-            double[,] searchOne = VariousMethods.InputArray(sourceOne, rowOne, columnOne, nameOne);
-            bool flOne = VariousMethods.SearchingPositiv(searchOne);
+            double[,] searchOne = ClassFor2DArray.InputArray(sourceOne, rowOne, columnOne, nameOne);
+            bool flOne = ClassFor2DArray.SearchingPositiv(searchOne);
             if (flOne)
             {
                Console.WriteLine("В двумерном массиве {0} нет искомых положительных элементов", nameOne);
             }
             else
             {
-               minOne = VariousMethods.SearchingMinPositiv(searchOne, nameOne);
+               minOne = ClassFor2DArray.SearchingMinPositiv(searchOne, nameOne);
             }
          }
 
-         double result = VariousMethods.CalculatingValue(minOne, minTwo, minThree);
-         Console.WriteLine("Результат Amin * Bmin – Cmin: {0}", result);
-         //Console.WriteLine("Результат Amin * Bmin – Cmin: {0:f2}", result);
-         //Console.WriteLine("Результат Amin * Bmin – Cmin: {0:f}", result);
-
-         string[] stringArray = VariousMethods.VivodString(result);
+         //string[] stringArray = ClassFor2DArray.VivodString(result);
          string pathFour = Path.GetFullPath(nameFileFour);
          if (!File.Exists(pathFour))
          {
@@ -69,7 +64,7 @@ namespace Homework_4._8
             File.Create(pathFour).Close();
          }
 
-         VariousMethods.FileWriteString(stringArray, nameFileFour);
+         //ClassFor2DArray.FileWriteString(stringArray, nameFileFour);
          Console.ReadKey();
       }
    }
