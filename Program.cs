@@ -22,24 +22,13 @@ namespace Homework_4._8
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
          string nameOne = "A";
-         string nameTwo = "B";
-         string nameThree = "C";
-
          string nameFileOne = "a.txt";
-         string nameFileTwo = "b.txt";
-         string nameFileThree = "c.txt";
          string nameFileFour = "finish.txt";
 
          int rowOne = VariousMethods.SizeRow(nameOne);
          int columnOne = VariousMethods.SizeColumn(nameOne);
-         int rowTwo = VariousMethods.SizeRow(nameTwo);
-         int columnTwo = VariousMethods.SizeColumn(nameTwo);
-         int rowThree = VariousMethods.SizeRow(nameThree);
-         int columnThree = VariousMethods.SizeColumn(nameThree);
-
+        
          string pathOne = Path.GetFullPath(nameFileOne);
-         string pathTwo = Path.GetFullPath(nameFileTwo);
-         string pathThree = Path.GetFullPath(nameFileThree);
 
          double minOne = 0;
          double[,] sourceOne = VariousMethods.VvodArray(pathOne, nameFileOne);
@@ -58,46 +47,6 @@ namespace Homework_4._8
             else
             {
                minOne = VariousMethods.SearchingMinPositiv(searchOne, nameOne);
-            }
-         }
-
-         double minTwo = 0;
-         double[,] sourceTwo = VariousMethods.VvodArray(pathTwo, nameFileTwo);
-         if (sourceTwo.GetLength(0) == 0)
-         {
-            Console.WriteLine("Файл {0} пуст", nameFileTwo);
-         }
-         else
-         {
-            double[,] searchTwo = VariousMethods.InputArray(sourceTwo, rowTwo, columnTwo, nameTwo);
-            bool flTwo = VariousMethods.SearchingPositiv(searchTwo);
-            if (flTwo)
-            {
-               Console.WriteLine("В двумерном массиве {0} нет искомых положительных элементов", nameTwo);
-            }
-            else
-            {
-               minTwo = VariousMethods.SearchingMinPositiv(searchTwo, nameTwo);
-            }
-         }
-
-         double minThree = 0;
-         double[,] sourceThree = VariousMethods.VvodArray(pathThree, nameFileThree);
-         if (sourceThree.GetLength(0) == 0)
-         {
-            Console.WriteLine("Файл {0} пуст", nameFileThree);
-         }
-         else
-         {
-            double[,] searchThree = VariousMethods.InputArray(sourceThree, rowThree, columnThree, nameThree);
-            bool flThree = VariousMethods.SearchingPositiv(searchThree);
-            if (flThree)
-            {
-               Console.WriteLine("В двумерном массиве {0} нет искомых положительных элементов", nameThree);
-            }
-            else
-            {
-               minThree = VariousMethods.SearchingMinPositiv(searchThree, nameThree);
             }
          }
 
