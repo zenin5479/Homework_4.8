@@ -41,6 +41,7 @@ namespace Homework_4._8
          }
          else
          {
+            int[,] inputArray = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
             SplittingLines(sourceOne, multipleElement);
          }
 
@@ -62,22 +63,23 @@ namespace Homework_4._8
       static void SplittingLines(int[,] source, int multiple)
       {
          // Добавить массив для строки, заполнить его значения исходного массива и передать в метод SearchingMultiple
-         int[] ar = new int[source.GetLength(1)];
+         int[] lines = new int[source.GetLength(1)];
          int i = 0;
          while (i < source.GetLength(0))
          {
             int j = 0;
             while (j < source.GetLength(1))
             {
-               ar[j] = source[i, j];
+               lines[j] = source[i, j];
                j++;
             }
 
-            if (SearchingMultiple(ar, multiple))
+            if (SearchingMultiple(lines, multiple))
             {
-               Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i, multiple);
+               Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i + 1, multiple);
             }
 
+            Array.Clear(lines, 0, lines.Length);
             i++;
          }
       }
