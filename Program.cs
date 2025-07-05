@@ -79,6 +79,9 @@ namespace Homework_4._8
                string res = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
                //Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i + 1, multiple);
                Console.WriteLine(res);
+
+               //File.AppendAllLines(Path.Combine(docPath, "WriteFile.txt"), lines);
+
             }
 
             Array.Clear(lines, 0, lines.Length);
