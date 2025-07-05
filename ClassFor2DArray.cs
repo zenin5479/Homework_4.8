@@ -42,19 +42,19 @@ namespace Homework_4._8
 
       public static int MultipleElement()
       {
-         int m;
+         int multiple;
          do
          {
-            Console.WriteLine("Введите количество столбцов массива:");
-            int.TryParse(Console.ReadLine(), out m);
+            Console.WriteLine("Введите величину:");
+            int.TryParse(Console.ReadLine(), out multiple);
             //m = Convert.ToInt32(Console.ReadLine());
-            if (m <= 0 || m > 20)
+            if (multiple <= 0 || multiple > 20)
             {
                Console.WriteLine("Введено не верное значение");
             }
-         } while (m <= 0 || m > 20);
+         } while (multiple <= 0 || multiple > 20);
 
-         return m;
+         return multiple;
       }
 
       public static int SizeRow(string nameArray)
