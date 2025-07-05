@@ -76,8 +76,9 @@ namespace Homework_4._8
 
             if (SearchingMultiple(lines, multiple))
             {
-               
-               Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i + 1, multiple);
+               string res = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
+               //Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i + 1, multiple);
+               Console.WriteLine(res);
             }
 
             Array.Clear(lines, 0, lines.Length);
