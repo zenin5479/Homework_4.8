@@ -30,7 +30,7 @@ namespace Homework_4._8
          int columnOne = ClassFor2DArray.SizeColumn(nameOne);
          string pathOne = Path.GetFullPath(nameFileOne);
 
-         int[,] sourceOne = ClassFor2DArray.VvodArrayInt(pathOne, nameFileOne);
+         int[,] sourceOne = ClassFor2DArray.EnterArrayInt(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileOne);
