@@ -72,13 +72,13 @@ namespace Homework_4._8
 
       static void SplittingLines(int[,] source, int row, int multiple)
       {
-         //   for (int i = 0; i < n; i++)
-         //   {
-         //      if (find_kratnost(x[i], m, t))
-         //      {
-         //         fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
-         //      }
-         //   }
+         for (int i = 0; i < row; i++)
+         {
+            //if (SearchingMultiple(source[i, row], m, t))
+            //{
+            //   //fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
+            //}
+         }
       }
 
       bool SearchingMultiple(int[] lines, int m, int t)
