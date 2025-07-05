@@ -643,7 +643,7 @@ namespace Homework_4._8
 
       public static string[] OutputStringInt(int input)
       {
-         // Конвертация double в одномерный массив строк string[] для записи в файл (в одну строку массива)
+         // Конвертация int в одномерный массив строк string[] для записи в файл (в одну строку массива)
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
          stringModified.Append(input);
@@ -653,9 +653,9 @@ namespace Homework_4._8
          return stringArray;
       }
 
-      public static string[] OutputStringArrayDouble(double[] inputArray)
+      public static string[] OutputStringDouble(double[] inputArray)
       {
-         // Объединение одномерного массива максимальных значений строк double[]
+         // Объединение одномерного массива double[]
          // в одномерный массив строк string[] для записи в файл (в одну строку массива)
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
@@ -679,9 +679,9 @@ namespace Homework_4._8
          return stringArray;
       }
 
-      public static string[] OutputStringArrayInt(double[] inputArray)
+      public static string[] OutputStringInt(int[] inputArray)
       {
-         // Объединение одномерного массива максимальных значений строк double[]
+         // Объединение одномерного массива int[]
          // в одномерный массив строк string[] для записи в файл (в одну строку массива)
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
@@ -707,7 +707,7 @@ namespace Homework_4._8
 
       public static string[] OutputArrayString(double[] inputArray)
       {
-         // Объединение одномерного массива максимальных значений строк double[]
+         // Объединение одномерного массива double[]
          // в одномерный массив строк string[] для записи в файл
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
@@ -726,13 +726,6 @@ namespace Homework_4._8
          return arrayString;
       }
 
-      public static void FileWriteString(string[] stringArray)
-      {
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "b.txt";
-         File.WriteAllLines(filePath, stringArray);
-      }
 
       public static void FileWriteString(string[] stringArray, string nameFile)
       {
@@ -742,11 +735,11 @@ namespace Homework_4._8
          File.WriteAllLines(filePath, stringArray);
       }
 
-      public static void FileWriteArray(string[] arrayString)
+      public static void FileWriteArrayString(string[] arrayString, string nameFile)
       {
          // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "c.txt";
+         Console.WriteLine("Запись массива строк в файл {0}", nameFile);
+         string filePath = AppContext.BaseDirectory + nameFile;
          File.WriteAllLines(filePath, arrayString);
       }
    }
