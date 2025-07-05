@@ -534,6 +534,31 @@ namespace Homework_4._8
          return fl;
       }
 
+      public static bool SearchingPositivInt(int[,] search)
+      {
+         bool fl = true;
+         int i = 0;
+         while (i < search.GetLength(0) && fl)
+         {
+            int j = 0;
+            while (j < search.GetLength(1) && fl)
+            {
+               if (search[i, j] > 0)
+               {
+                  fl = false;
+               }
+               else
+               {
+                  j++;
+               }
+            }
+
+            i++;
+         }
+
+         return fl;
+      }
+
       public static double SearchingMinPositivDouble(double[,] search, string nameArray)
       {
          double min = search[0, 0];
@@ -565,29 +590,35 @@ namespace Homework_4._8
          return min;
       }
 
-      public static bool SearchingPositivInt(int[,] search)
+      public static int SearchingMinPositivInt(int[,] search, string nameArray)
       {
-         bool fl = true;
+         int min = search[0, 0];
          int i = 0;
-         while (i < search.GetLength(0) && fl)
+         while (i < search.GetLength(0))
          {
             int j = 0;
-            while (j < search.GetLength(1) && fl)
+            while (j < search.GetLength(1))
             {
-               if (search[i, j] > 0)
+               if (min < 0 && search[i, j] > min)
                {
-                  fl = false;
+                  min = search[i, j];
                }
-               else
+
+               if (search[i, j] > 0 && search[i, j] < min)
                {
-                  j++;
+                  min = search[i, j];
                }
+
+               j++;
             }
 
             i++;
          }
 
-         return fl;
+         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива {0}: {1}", nameArray, min);
+         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива {0}: {1:f2}", nameArray, min);
+         Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива {0}: {1:f}", nameArray, min);
+         return min;
       }
 
       public static double CalculatingValueDouble(double minOne, double minTwo, double minThree)
