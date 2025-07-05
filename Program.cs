@@ -42,16 +42,6 @@ namespace Homework_4._8
          else
          {
             SplittingLines(sourceOne, multipleElement);
-
-            bool flOne = ClassFor2DArray.SearchingPositivInt(sourceOne);
-            if (flOne)
-            {
-               Console.WriteLine("В двумерном массиве нет искомых положительных элементов");
-            }
-            else
-            {
-
-            }
          }
 
          string pathTwo = Path.GetFullPath(nameFileTwo);
@@ -80,24 +70,24 @@ namespace Homework_4._8
             while (j < source.GetLength(1))
             {
                ar[j] = source[i, j];
+               j++;
             }
-
 
             if (SearchingMultiple(ar, multiple))
             {
-               //fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
+               Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i, multiple);
             }
 
             i++;
          }
       }
 
-      static bool SearchingMultiple(int[] lines, int t)
+      static bool SearchingMultiple(int[] lines, int multiple)
       {
          // Обновить до while
-         for (int j = 0; j < lines.Length; j++)
+         for (int i = 0; i < lines.Length; i++)
          {
-            if (lines[j] % t == 0)
+            if (lines[i] % multiple == 0)
             {
                return true;
             }
