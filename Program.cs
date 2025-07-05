@@ -24,7 +24,7 @@ namespace Homework_4._8
          // Заменить все на целочисленный двумерный массив int[,]
          string nameOne = "A";
          string nameFileOne = "a.txt";
-         string nameFileFour = "finish.txt";
+         string nameFileTwo = "finish.txt";
 
          int rowOne = ClassFor2DArray.SizeRow(nameOne);
          int columnOne = ClassFor2DArray.SizeColumn(nameOne);
@@ -52,16 +52,16 @@ namespace Homework_4._8
          }
 
          //string[] stringArray = ClassFor2DArray.VivodString(result);
-         string pathFour = Path.GetFullPath(nameFileFour);
+         string pathFour = Path.GetFullPath(nameFileTwo);
          if (!File.Exists(pathFour))
          {
-            Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileFour);
+            Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileTwo);
             File.Create(pathFour);
          }
          else
          {
             // Очищаем содержимое файла
-            Console.WriteLine("Файл {0} содержит предыдущие результаты. Очищаем данные", nameFileFour);
+            Console.WriteLine("Файл {0} содержит предыдущие результаты. Очищаем данные", nameFileTwo);
             File.Create(pathFour).Close();
          }
 
