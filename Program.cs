@@ -42,10 +42,9 @@ namespace Homework_4._8
          }
          else
          {
-            int[,] searchOne = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
+            SplittingLines(sourceOne, rowOne, multipleElement);
 
-
-            bool flOne = ClassFor2DArray.SearchingPositivInt(searchOne);
+            bool flOne = ClassFor2DArray.SearchingPositivInt(sourceOne);
             if (flOne)
             {
                Console.WriteLine("В двумерном массиве нет искомых положительных элементов");
@@ -69,6 +68,29 @@ namespace Homework_4._8
          }
 
          Console.ReadKey();
+      }
+
+      static void SplittingLines(int[,] source, int row, int multiple)
+      {
+         //   for (int i = 0; i < n; i++)
+         //   {
+         //      if (find_kratnost(x[i], m, t))
+         //      {
+         //         fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
+         //      }
+         //   }
+      }
+
+      bool SearchingMultiple(int[] lines, int m, int t)
+      {
+         for (int j = 0; j < m; j++)
+         {
+            if (lines[j] % t == 0)
+            {
+               return true;
+            }
+         }
+         return false;
       }
 
       //bool find_kratnost(int* x, int m, int t)
