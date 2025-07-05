@@ -22,6 +22,7 @@ namespace Homework_4._8
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
          // Написать перегрузки методов без названия массива
+         // linewise - построчно
          string nameOne = "A";
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
