@@ -34,7 +34,6 @@ namespace Homework_4._8
 
          string pathOne = Path.GetFullPath(nameFileOne);
 
-
          int[,] sourceOne = ClassFor2DArray.EnterArrayInt(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
