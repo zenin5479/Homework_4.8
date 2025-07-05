@@ -38,14 +38,14 @@ namespace Homework_4._8
          else
          {
             int[,] searchOne = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne, nameOne);
-            bool flOne = ClassFor2DArray.SearchingPositiv(searchOne);
+            bool flOne = ClassFor2DArray.SearchingPositivInt(searchOne);
             if (flOne)
             {
                Console.WriteLine("В двумерном массиве {0} нет искомых положительных элементов", nameOne);
             }
             else
             {
-               
+
             }
          }
 

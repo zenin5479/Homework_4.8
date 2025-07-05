@@ -471,7 +471,7 @@ namespace Homework_4._8
          return arrayMax;
       }
 
-      public static bool SearchingPositiv(double[,] search)
+      public static bool SearchingPositivDouble(double[,] search)
       {
          bool fl = true;
          int i = 0;
@@ -496,7 +496,7 @@ namespace Homework_4._8
          return fl;
       }
 
-      public static double SearchingMinPositiv(double[,] search, string nameArray)
+      public static double SearchingMinPositivDouble(double[,] search, string nameArray)
       {
          double min = search[0, 0];
          int i = 0;
@@ -526,6 +526,33 @@ namespace Homework_4._8
          //Console.WriteLine("Минимальное значение среди положительных элементов двумерного массива {0}: {1:f}", nameArray, min);
          return min;
       }
+
+      public static bool SearchingPositivInt(int[,] search)
+      {
+         bool fl = true;
+         int i = 0;
+         while (i < search.GetLength(0) && fl)
+         {
+            int j = 0;
+            while (j < search.GetLength(1) && fl)
+            {
+               if (search[i, j] > 0)
+               {
+                  fl = false;
+               }
+               else
+               {
+                  j++;
+               }
+            }
+
+            i++;
+         }
+
+         return fl;
+      }
+
+
 
       public static double CalculatingValue(double minOne, double minTwo, double minThree)
       {
