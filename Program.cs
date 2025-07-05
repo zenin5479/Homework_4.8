@@ -31,7 +31,6 @@ namespace Homework_4._8
 
          string pathOne = Path.GetFullPath(nameFileOne);
 
-         double minOne = 0;
          int[,] sourceOne = ClassFor2DArray.VvodArrayInt(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
@@ -47,7 +46,7 @@ namespace Homework_4._8
             }
             else
             {
-               minOne = ClassFor2DArray.SearchingMinPositiv(searchOne, nameOne);
+               
             }
          }
 

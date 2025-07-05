@@ -280,7 +280,7 @@ namespace Homework_4._8
 
       public static int[,] VvodArrayInt(string path, string nameFile)
       {
-         // Двумерный массив вещественных чисел
+         // Двумерный целочисленный массив 
          int[,] arrayDouble = { };
          // Чтение файла за одну операцию
          string[] allLines = File.ReadAllLines(path);
@@ -328,7 +328,7 @@ namespace Homework_4._8
                countSymbol = 0;
             }
 
-            // Разделение строки на подстроки по пробелу и конвертация подстрок в double
+            // Разделение строки на подстроки по пробелу и конвертация подстрок в int
             StringBuilder stringModified = new StringBuilder();
             arrayDouble = new int[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
