@@ -49,19 +49,18 @@ namespace Homework_4._8
             }
          }
 
-         string pathFour = Path.GetFullPath(nameFileTwo);
-         if (!File.Exists(pathFour))
+         string pathTwo = Path.GetFullPath(nameFileTwo);
+         if (!File.Exists(pathTwo))
          {
             Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileTwo);
-            File.Create(pathFour);
+            File.Create(pathTwo);
          }
          else
          {
             // Очищаем содержимое файла
-            File.Create(pathFour).Close();
+            File.Create(pathTwo).Close();
          }
 
-         //ClassFor2DArray.FileWriteString(stringArray, nameFileFour);
          Console.ReadKey();
       }
    }
