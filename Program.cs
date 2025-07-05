@@ -23,6 +23,8 @@ namespace Homework_4._8
 
          // Написать перегрузки методов без названия массива
          // linewise - построчно
+         // multipleElement - кратный элемент
+         // splittingLines - разделение на строки
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
