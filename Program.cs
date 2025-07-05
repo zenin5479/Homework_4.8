@@ -28,7 +28,6 @@ namespace Homework_4._8
 
          int rowOne = ClassFor2DArray.SizeRow(nameOne);
          int columnOne = ClassFor2DArray.SizeColumn(nameOne);
-
          string pathOne = Path.GetFullPath(nameFileOne);
 
          int[,] sourceOne = ClassFor2DArray.VvodArrayInt(pathOne, nameFileOne);
@@ -38,7 +37,7 @@ namespace Homework_4._8
          }
          else
          {
-            double[,] searchOne = ClassFor2DArray.InputArray(sourceOne, rowOne, columnOne, nameOne);
+            int[,] searchOne = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne, nameOne);
             bool flOne = ClassFor2DArray.SearchingPositiv(searchOne);
             if (flOne)
             {
