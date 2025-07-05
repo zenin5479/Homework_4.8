@@ -376,7 +376,7 @@ namespace Homework_4._8
          return arrayDouble;
       }
 
-      public static double[,] InputArray(double[,] inputArray, int n, int m)
+      public static double[,] InputArrayDouble(double[,] inputArray, int n, int m)
       {
          Console.WriteLine("Двумерный числовой массив для проведения поиска");
          double[,] outputArray = new double[n, m];
@@ -395,7 +395,7 @@ namespace Homework_4._8
          return outputArray;
       }
 
-      public static double[,] InputArray(int[,] inputArray, int n, int m, string nameArray)
+      public static double[,] InputArrayDouble(int[,] inputArray, int n, int m, string nameArray)
       {
          Console.WriteLine("Двумерный массив вещественных чисел {0}:", nameArray);
          double[,] outputArray = new double[n, m];
