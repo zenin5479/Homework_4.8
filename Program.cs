@@ -42,7 +42,7 @@ namespace Homework_4._8
             bool flOne = ClassFor2DArray.SearchingPositivInt(searchOne);
             if (flOne)
             {
-               Console.WriteLine("В двумерном массиве {0} нет искомых положительных элементов", nameOne);
+               Console.WriteLine("В двумерном массиве нет искомых положительных элементов");
             }
             else
             {

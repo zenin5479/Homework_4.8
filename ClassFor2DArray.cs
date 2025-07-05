@@ -278,6 +278,104 @@ namespace Homework_4._8
          return arrayDouble;
       }
 
+      public static int[,] EnterArrayInt(string path)
+      {
+         // Двумерный целочисленный массив 
+         int[,] arrayDouble = { };
+         // Чтение файла за одну операцию
+         string[] allLines = File.ReadAllLines(path);
+         if (allLines == null || allLines.Length == 0)
+         {
+            Console.WriteLine("Ошибка содержимого файла для чтения {0}", nameFile);
+            //Console.WriteLine("Ошибка содержимого файла для чтения {0}. Файл пуст", nameFile);
+         }
+         else
+         {
+            int indexLines = 0;
+            while (indexLines < allLines.Length)
+            {
+               allLines[indexLines] = allLines[indexLines];
+               indexLines++;
+            }
+
+            // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
+            int[] sizeArray = new int[allLines.Length];
+            char symbolSpace = ' ';
+            int countRow = 0;
+            int countSymbol = 0;
+            int countСolumn = 0;
+            while (countRow < allLines.Length)
+            {
+               string line = allLines[countRow];
+               while (countSymbol < line.Length)
+               {
+                  if (symbolSpace == line[countSymbol])
+                  {
+                     countСolumn++;
+                  }
+
+                  if (countSymbol == line.Length - 1)
+                  {
+                     countСolumn++;
+                  }
+
+                  countSymbol++;
+               }
+
+               sizeArray[countRow] = countСolumn;
+               countСolumn = 0;
+               countRow++;
+               countSymbol = 0;
+            }
+
+            // Разделение строки на подстроки по пробелу и конвертация подстрок в int
+            StringBuilder stringModified = new StringBuilder();
+            arrayDouble = new int[allLines.Length, sizeArray.Length];
+            char spaceCharacter = ' ';
+            int row = 0;
+            int column = 0;
+            int countCharacter = 0;
+            while (row < arrayDouble.GetLength(0))
+            {
+               string line = allLines[row];
+               while (column < sizeArray[row])
+               {
+                  while (countCharacter < line.Length)
+                  {
+                     if (spaceCharacter != line[countCharacter])
+                     {
+                        stringModified.Append(line[countCharacter]);
+                     }
+                     else
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToInt32(subLine);
+                        stringModified.Clear();
+                        column++;
+                     }
+
+                     if (countCharacter == line.Length - 1)
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToInt32(subLine);
+                        stringModified.Clear();
+                        column++;
+                     }
+
+                     countCharacter++;
+                  }
+
+                  countCharacter = 0;
+               }
+
+               column = 0;
+               row++;
+            }
+         }
+
+         return arrayDouble;
+      }
+
       public static int[,] EnterArrayInt(string path, string nameFile)
       {
          // Двумерный целочисленный массив 
