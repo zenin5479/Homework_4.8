@@ -38,7 +38,7 @@ namespace Homework_4._8
          }
          else
          {
-            int[,] searchOne = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne, nameOne);
+            int[,] searchOne = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
             bool flOne = ClassFor2DArray.SearchingPositivInt(searchOne);
             if (flOne)
             {

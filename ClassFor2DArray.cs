@@ -415,9 +415,9 @@ namespace Homework_4._8
          return outputArray;
       }
 
-      public static int[,] InputArrayInt(int[,] inputArray, int n, int m, string nameArray)
+      public static int[,] InputArrayInt(int[,] inputArray, int n, int m)
       {
-         Console.WriteLine("Двумерный целочисленный массив {0}:", nameArray);
+         Console.WriteLine("Двумерный целочисленный массив:");
          int[,] outputArray = new int[n, m];
          for (int i = 0; i < n; i++)
          {
