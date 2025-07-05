@@ -23,12 +23,12 @@ namespace Homework_4._8
 
          // Написать перегрузки методов без названия массива
          // linewise - построчно
-         string nameOne = "A";
+         //string nameOne = "A";
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
-         int rowOne = ClassFor2DArray.SizeRow(nameOne);
-         int columnOne = ClassFor2DArray.SizeColumn(nameOne);
+         int rowOne = ClassFor2DArray.SizeRow();
+         int columnOne = ClassFor2DArray.SizeColumn();
          string pathOne = Path.GetFullPath(nameFileOne);
 
          int[,] sourceOne = ClassFor2DArray.EnterArrayInt(pathOne, nameFileOne);
