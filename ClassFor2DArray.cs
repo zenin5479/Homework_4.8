@@ -682,7 +682,5 @@ namespace Homework_4._8
          string filePath = AppContext.BaseDirectory + "c.txt";
          File.WriteAllLines(filePath, arrayString);
       }
-
-
    }
 }
