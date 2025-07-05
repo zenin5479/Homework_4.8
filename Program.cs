@@ -72,23 +72,30 @@ namespace Homework_4._8
       static void SplittingLines(int[,] source, int multiple)
       {
          // Добавить массив для строки, заполнить его значения исходного массива и передать в метод SearchingMultiple
+         int[] ar = new int[source.GetLength(1)];
          int i = 0;
          while (i < source.GetLength(0))
          {
+            int j = 0;
+            while (j < source.GetLength(1))
+            {
+               ar[j] = source[i, j];
+            }
 
-            //if (SearchingMultiple(source[i, row], m, t))
-            //{
-            //   //fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
-            //}
+
+            if (SearchingMultiple(ar, multiple))
+            {
+               //fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
+            }
 
             i++;
          }
       }
 
-      bool SearchingMultiple(int[] lines, int m, int t)
+      static bool SearchingMultiple(int[] lines, int t)
       {
          // Обновить до while
-         for (int j = 0; j < m; j++)
+         for (int j = 0; j < lines.Length; j++)
          {
             if (lines[j] % t == 0)
             {
