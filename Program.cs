@@ -84,7 +84,6 @@ namespace Homework_4._8
 
       static bool SearchingMultiple(int[] lines, int multiple)
       {
-         // Обновить до while
          int i = 0;
          while (i < lines.Length)
          {
@@ -97,7 +96,6 @@ namespace Homework_4._8
          }
 
          return false;
-
       }
 
       //bool find_kratnost(int* x, int m, int t)
