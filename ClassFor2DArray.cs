@@ -433,7 +433,7 @@ namespace Homework_4._8
          return outputArray;
       }
 
-      public static double[] FindMax(double[,] inputArray)
+      public static double[] FindMaxDouble(double[,] inputArray)
       {
          // Поиск максимального элемента строки (без флагов bool)
          double[] arrayMax = new double[inputArray.GetLength(0)];
@@ -443,6 +443,44 @@ namespace Homework_4._8
          {
             // Cчитаем, что максимум - это первый элемент строки
             double maxOut = inputArray[rowOut, 0];
+            while (columnOut < inputArray.GetLength(1))
+            {
+               if (maxOut < inputArray[rowOut, columnOut])
+               {
+                  maxOut = inputArray[rowOut, columnOut];
+               }
+
+               columnOut++;
+            }
+
+            arrayMax[rowOut] = maxOut;
+            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
+            columnOut = 0;
+            rowOut++;
+         }
+
+         Console.WriteLine("Массив максимальных значений строк");
+         int indexMax = 0;
+         while (indexMax < arrayMax.Length)
+         {
+            Console.Write("{0} ", arrayMax[indexMax]);
+            indexMax++;
+         }
+
+         Console.WriteLine();
+         return arrayMax;
+      }
+
+      public static int[] FindMaxInt(int[,] inputArray)
+      {
+         // Поиск максимального элемента строки (без флагов bool)
+         int[] arrayMax = new int[inputArray.GetLength(0)];
+         int rowOut = 0;
+         int columnOut = 0;
+         while (rowOut < inputArray.GetLength(0))
+         {
+            // Cчитаем, что максимум - это первый элемент строки
+            int maxOut = inputArray[rowOut, 0];
             while (columnOut < inputArray.GetLength(1))
             {
                if (maxOut < inputArray[rowOut, columnOut])
@@ -551,10 +589,13 @@ namespace Homework_4._8
 
          return fl;
       }
+      
+      public static double CalculatingValueDouble(double minOne, double minTwo, double minThree)
+      {
+         return minOne * minTwo - minThree;
+      }
 
-
-
-      public static double CalculatingValue(double minOne, double minTwo, double minThree)
+      public static int CalculatingValueInt(int minOne, int minTwo, int minThree)
       {
          return minOne * minTwo - minThree;
       }
