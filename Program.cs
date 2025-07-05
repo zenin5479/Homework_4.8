@@ -23,7 +23,6 @@ namespace Homework_4._8
 
          // Написать перегрузки методов без названия массива
          // linewise - построчно
-         //string nameOne = "A";
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
@@ -50,7 +49,6 @@ namespace Homework_4._8
             }
          }
 
-         //string[] stringArray = ClassFor2DArray.VivodString(result);
          string pathFour = Path.GetFullPath(nameFileTwo);
          if (!File.Exists(pathFour))
          {
