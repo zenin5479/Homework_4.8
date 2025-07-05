@@ -71,6 +71,27 @@ namespace Homework_4._8
          Console.ReadKey();
       }
 
+      //bool find_kratnost(int* x, int m, int t)
+      //{
+      //   for (int j = 0; j < m; j++)
+      //   {
+      //      if (x[j] % t == 0)
+      //      {
+      //         return true;
+      //      }
+      //   }
+      //   return false;
+      //}
 
+      //void perexod(int** x, int n, int m, int t, FILE* f)
+      //{
+      //   for (int i = 0; i < n; i++)
+      //   {
+      //      if (find_kratnost(x[i], m, t))
+      //      {
+      //         fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
+      //      }
+      //   }
+      //}
    }
 }
