@@ -47,7 +47,7 @@ namespace Homework_4._8
          {
             Console.WriteLine("Введите величину:");
             int.TryParse(Console.ReadLine(), out multiple);
-            multiple = Convert.ToInt32(Console.ReadLine());
+            //multiple = Convert.ToInt32(Console.ReadLine());
             if (multiple <= 0 || multiple > 99)
             {
                Console.WriteLine("Введено не верное значение");
