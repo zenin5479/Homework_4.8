@@ -417,7 +417,7 @@ namespace Homework_4._8
 
       public static int[,] InputArrayInt(int[,] inputArray, int n, int m, string nameArray)
       {
-         Console.WriteLine("Двумерный целочисленный массив  {0}:", nameArray);
+         Console.WriteLine("Двумерный целочисленный массив {0}:", nameArray);
          int[,] outputArray = new int[n, m];
          for (int i = 0; i < n; i++)
          {
@@ -432,7 +432,6 @@ namespace Homework_4._8
 
          return outputArray;
       }
-
 
       public static double[] FindMax(double[,] inputArray)
       {
