@@ -179,7 +179,7 @@ namespace Homework_4._8
 
          return arrayDouble;
       }
-      
+
       public static double[,] VvodArrayDouble(string path, string nameFile)
       {
          // Двумерный массив вещественных чисел
@@ -375,9 +375,6 @@ namespace Homework_4._8
 
          return arrayDouble;
       }
-
-
-
 
       public static double[,] InputArray(double[,] inputArray, int n, int m)
       {
