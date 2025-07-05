@@ -629,7 +629,19 @@ namespace Homework_4._8
          return minOne * minTwo - minThree;
       }
 
-      public static string[] VivodString(double input)
+      public static string[] VivodStringDouble(double input)
+      {
+         // Конвертация double в одномерный массив строк string[] для записи в файл (в одну строку массива)
+         Console.WriteLine("Одномерный массив строк");
+         StringBuilder stringModified = new StringBuilder();
+         stringModified.Append(input);
+         string line = stringModified.ToString();
+         Console.WriteLine(line);
+         string[] stringArray = { line };
+         return stringArray;
+      }
+
+      public static string[] VivodStringInt(int input)
       {
          // Конвертация double в одномерный массив строк string[] для записи в файл (в одну строку массива)
          Console.WriteLine("Одномерный массив строк");
