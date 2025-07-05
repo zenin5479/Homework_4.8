@@ -589,7 +589,7 @@ namespace Homework_4._8
 
          return fl;
       }
-      
+
       public static double CalculatingValueDouble(double minOne, double minTwo, double minThree)
       {
          return minOne * minTwo - minThree;
