@@ -42,7 +42,7 @@ namespace Homework_4._8
          else
          {
             int[,] inputArray = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
-            SplittingLines(sourceOne, multipleElement);
+            SplittingLines(inputArray, multipleElement);
          }
 
          string pathTwo = Path.GetFullPath(nameFileTwo);
@@ -60,22 +60,23 @@ namespace Homework_4._8
          Console.ReadKey();
       }
 
-      static void SplittingLines(int[,] source, int multiple)
+      static void SplittingLines(int[,] input, int multiple)
       {
          // Добавить массив для строки, заполнить его значения исходного массива и передать в метод SearchingMultiple
-         int[] lines = new int[source.GetLength(1)];
+         int[] lines = new int[input.GetLength(1)];
          int i = 0;
-         while (i < source.GetLength(0))
+         while (i < input.GetLength(0))
          {
             int j = 0;
-            while (j < source.GetLength(1))
+            while (j < input.GetLength(1))
             {
-               lines[j] = source[i, j];
+               lines[j] = input[i, j];
                j++;
             }
 
             if (SearchingMultiple(lines, multiple))
             {
+               
                Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i + 1, multiple);
             }
 
