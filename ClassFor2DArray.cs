@@ -11,7 +11,7 @@ namespace Homework_4._8
          int n;
          do
          {
-            Console.WriteLine("Введите количество строк массива А");
+            Console.WriteLine("Введите количество строк массива:");
             int.TryParse(Console.ReadLine(), out n);
             //n = Convert.ToInt32(Console.ReadLine());
             if (n <= 0 || n > 20)
@@ -28,7 +28,7 @@ namespace Homework_4._8
          int m;
          do
          {
-            Console.WriteLine("Введите количество столбцов массива А");
+            Console.WriteLine("Введите количество столбцов массива:");
             int.TryParse(Console.ReadLine(), out m);
             //m = Convert.ToInt32(Console.ReadLine());
             if (m <= 0 || m > 20)
