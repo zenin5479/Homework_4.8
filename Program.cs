@@ -42,7 +42,7 @@ namespace Homework_4._8
          }
          else
          {
-            SplittingLines(sourceOne, rowOne, multipleElement);
+            SplittingLines(sourceOne, multipleElement);
 
             bool flOne = ClassFor2DArray.SearchingPositivInt(sourceOne);
             if (flOne)
@@ -70,14 +70,19 @@ namespace Homework_4._8
          Console.ReadKey();
       }
 
-      static void SplittingLines(int[,] source, int row, int multiple)
+      static void SplittingLines(int[,] source, int multiple)
       {
-         for (int i = 0; i < row; i++)
+         int i = 0;
+         while (i < source.GetLength(0))
          {
+            
             //if (SearchingMultiple(source[i, row], m, t))
             //{
             //   //fprintf(f, "В массиве найдена строка %d с элементом, кратным %d\n", i + 1, t);
             //}
+            
+            
+            i++;
          }
       }
 
