@@ -59,7 +59,6 @@ namespace Homework_4._8
          else
          {
             // Очищаем содержимое файла
-            Console.WriteLine("Файл {0} содержит предыдущие результаты. Очищаем данные", nameFileTwo);
             File.Create(pathFour).Close();
          }
 
