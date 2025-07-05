@@ -415,6 +415,27 @@ namespace Homework_4._8
          return outputArray;
       }
 
+      public static int[,] InputArrayInt(int[,] inputArray, int n, int m, string nameArray)
+      {
+         Console.WriteLine("Двумерный целочисленный массив  {0}:", nameArray);
+         double[,] outputArray = new double[n, m];
+         for (int i = 0; i < n; i++)
+         {
+            for (int j = 0; j < m; j++)
+            {
+               outputArray[i, j] = inputArray[i, j];
+               Console.Write("{0} ", outputArray[i, j]);
+               //Console.Write("{0:f2} ", outputArray[i, j]);
+               //Console.Write("{0:f} ", outputArray[i, j]);
+            }
+
+            Console.WriteLine();
+         }
+
+         return outputArray;
+      }
+
+
       public static double[] FindMax(double[,] inputArray)
       {
          // Поиск максимального элемента строки (без флагов bool)
