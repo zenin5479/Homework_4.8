@@ -32,7 +32,7 @@ namespace Homework_4._8
          string pathOne = Path.GetFullPath(nameFileOne);
 
          double minOne = 0;
-         double[,] sourceOne = ClassFor2DArray.VvodArray(pathOne, nameFileOne);
+         int[,] sourceOne = ClassFor2DArray.VvodArray(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileOne);

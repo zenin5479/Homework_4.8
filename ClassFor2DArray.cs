@@ -233,7 +233,7 @@ namespace Homework_4._8
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             StringBuilder stringModified = new StringBuilder();
-            arrayDouble = new double[allLines.Length, sizeArray.Length];
+            arrayDouble = new int[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
             int row = 0;
             int column = 0;
@@ -252,7 +252,7 @@ namespace Homework_4._8
                      else
                      {
                         string subLine = stringModified.ToString();
-                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        arrayDouble[row, column] = Convert.ToInt32(subLine);
                         stringModified.Clear();
                         column++;
                      }
@@ -260,7 +260,7 @@ namespace Homework_4._8
                      if (countCharacter == line.Length - 1)
                      {
                         string subLine = stringModified.ToString();
-                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        arrayDouble[row, column] = Convert.ToInt32(subLine);
                         stringModified.Clear();
                         column++;
                      }
@@ -397,7 +397,7 @@ namespace Homework_4._8
          return outputArray;
       }
 
-      public static double[,] InputArray(double[,] inputArray, int n, int m, string nameArray)
+      public static double[,] InputArray(int[,] inputArray, int n, int m, string nameArray)
       {
          Console.WriteLine("Двумерный массив вещественных чисел {0}:", nameArray);
          double[,] outputArray = new double[n, m];
@@ -598,5 +598,7 @@ namespace Homework_4._8
          string filePath = AppContext.BaseDirectory + "c.txt";
          File.WriteAllLines(filePath, arrayString);
       }
+
+
    }
 }
