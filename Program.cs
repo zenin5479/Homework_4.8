@@ -37,7 +37,7 @@ namespace Homework_4._8
             int[,] inputArray = VariousMethods.InputArrayInt(sourceOne, rowOne, columnOne);
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
-            VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
+            ClassFor2DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
          }
 
          Console.ReadKey();
