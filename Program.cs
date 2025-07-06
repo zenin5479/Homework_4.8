@@ -1,6 +1,6 @@
-﻿using System;
+﻿using LibraryFor2DArray;
+using System;
 using System.IO;
-using LibraryFor2DArray;
 
 // Разработать программу для обработки двумерного массива
 // При выполнении задания необходимо разработать подпрограмму,
