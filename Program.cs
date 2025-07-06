@@ -42,19 +42,19 @@ namespace Homework_4._8
          else
          {
             int[,] inputArray = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
-            SplittingLines(inputArray, multipleElement, nameFileTwo);
-         }
+            string pathTwo = Path.GetFullPath(nameFileTwo);
+            if (!File.Exists(pathTwo))
+            {
+               Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileTwo);
+               File.Create(pathTwo);
+            }
+            else
+            {
+               // Очищаем содержимое файла
+               File.Create(pathTwo).Close();
+            }
 
-         string pathTwo = Path.GetFullPath(nameFileTwo);
-         if (!File.Exists(pathTwo))
-         {
-            Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileTwo);
-            File.Create(pathTwo);
-         }
-         else
-         {
-            // Очищаем содержимое файла
-            File.Create(pathTwo).Close();
+            SplittingLines(inputArray, multipleElement, nameFileTwo);
          }
 
          Console.ReadKey();
