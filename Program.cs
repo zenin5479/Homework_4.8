@@ -37,19 +37,6 @@ namespace Homework_4._8
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
             ClassFor2DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
-
-            if (!File.Exists(pathTwo))
-            {
-               Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileTwo);
-               File.Create(pathTwo).Close();
-            }
-            else
-            {
-               // Очищаем содержимое файла
-
-            }
-
-
          }
 
          Console.ReadKey();
