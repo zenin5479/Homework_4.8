@@ -771,10 +771,9 @@ namespace Homework_4._8
 
       public static void FileAppendStringArray(string line, string nameFile)
       {
-         // Объединение одномерного массива double[]
-         // в одномерный массив строк string[] для записи в файл
+         // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
-         // Запись массива строк в файл
+         // Добавление массива строк в файл
          string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(filePath, stringArray);
       }
