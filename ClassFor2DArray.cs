@@ -664,6 +664,47 @@ namespace Homework_4._8
          return minOne * minTwo - minThree;
       }
 
+      public static void SplittingLines(int[,] input, int multiple, string nameFile)
+      {
+         int[] lines = new int[input.GetLength(1)];
+         int i = 0;
+         while (i < input.GetLength(0))
+         {
+            int j = 0;
+            while (j < input.GetLength(1))
+            {
+               lines[j] = input[i, j];
+               j++;
+            }
+
+            if (SearchingMultiple(lines, multiple))
+            {
+               string line = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
+               Console.WriteLine(line);
+               FileAppendStringArray(line, nameFile);
+            }
+
+            Array.Clear(lines, 0, lines.Length);
+            i++;
+         }
+      }
+
+      public static bool SearchingMultiple(int[] lines, int multiple)
+      {
+         int i = 0;
+         while (i < lines.Length)
+         {
+            if (lines[i] % multiple == 0)
+            {
+               return true;
+            }
+
+            i++;
+         }
+
+         return false;
+      }
+
       public static string[] OutputStringDouble(double input)
       {
          // Конвертация double в одномерный массив строк string[] для записи в файл (в одну строку массива)
@@ -777,5 +818,7 @@ namespace Homework_4._8
          string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(filePath, stringArray);
       }
+
+
    }
 }

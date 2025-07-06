@@ -49,51 +49,12 @@ namespace Homework_4._8
                File.Create(pathTwo).Close();
             }
 
-            SplittingLines(inputArray, multipleElement, nameFileTwo);
+            ClassFor2DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
          }
 
          Console.ReadKey();
       }
 
-      static void SplittingLines(int[,] input, int multiple, string nameFile)
-      {
-         int[] lines = new int[input.GetLength(1)];
-         int i = 0;
-         while (i < input.GetLength(0))
-         {
-            int j = 0;
-            while (j < input.GetLength(1))
-            {
-               lines[j] = input[i, j];
-               j++;
-            }
 
-            if (SearchingMultiple(lines, multiple))
-            {
-               string line = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
-               Console.WriteLine(line);
-               ClassFor2DArray.FileAppendStringArray(line, nameFile);
-            }
-
-            Array.Clear(lines, 0, lines.Length);
-            i++;
-         }
-      }
-
-      static bool SearchingMultiple(int[] lines, int multiple)
-      {
-         int i = 0;
-         while (i < lines.Length)
-         {
-            if (lines[i] % multiple == 0)
-            {
-               return true;
-            }
-
-            i++;
-         }
-
-         return false;
-      }
    }
 }
