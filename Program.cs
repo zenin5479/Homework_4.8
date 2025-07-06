@@ -21,22 +21,22 @@ namespace Homework_4._8
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
-         int rowOne = ClassFor2DArray.SizeRow();
-         int columnOne = ClassFor2DArray.SizeColumn();
-         int multipleElement = ClassFor2DArray.MultipleElement();
+         int rowOne = LibraryFor2DArray.VariousMethods.SizeRow();
+         int columnOne = LibraryFor2DArray.VariousMethods.SizeColumn();
+         int multipleElement = LibraryFor2DArray.VariousMethods.MultipleElement();
 
          string pathOne = Path.GetFullPath(nameFileOne);
-         int[,] sourceOne = ClassFor2DArray.EnterArrayInt(pathOne, nameFileOne);
+         int[,] sourceOne = LibraryFor2DArray.VariousMethods.EnterArrayInt(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileOne);
          }
          else
          {
-            int[,] inputArray = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
+            int[,] inputArray = LibraryFor2DArray.VariousMethods.InputArrayInt(sourceOne, rowOne, columnOne);
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
-            ClassFor2DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
+            LibraryFor2DArray.VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
          }
 
          Console.ReadKey();
