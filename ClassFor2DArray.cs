@@ -666,6 +666,7 @@ namespace Homework_4._8
 
       public static void SplittingLines(int[,] input, int multiple, string nameFile)
       {
+         int counterMultiple = 0;
          int[] lines = new int[input.GetLength(1)];
          int i = 0;
          while (i < input.GetLength(0))
@@ -682,10 +683,18 @@ namespace Homework_4._8
                string line = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
                Console.WriteLine(line);
                FileAppendStringArray(line, nameFile);
+               counterMultiple++;
             }
 
             Array.Clear(lines, 0, lines.Length);
             i++;
+         }
+
+         if (counterMultiple == 0)
+         {
+            string line = "В массиве не найдено строк с элементом, кратным " + multiple;
+            Console.WriteLine(line);
+            FileAppendStringArray(line, nameFile);
          }
       }
 
