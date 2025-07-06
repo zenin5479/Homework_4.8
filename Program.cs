@@ -35,6 +35,9 @@ namespace Homework_4._8
          {
             int[,] inputArray = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
             string pathTwo = Path.GetFullPath(nameFileTwo);
+            File.Create(pathTwo).Close();
+            ClassFor2DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
+
             if (!File.Exists(pathTwo))
             {
                Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileTwo);
@@ -43,10 +46,10 @@ namespace Homework_4._8
             else
             {
                // Очищаем содержимое файла
-               File.Create(pathTwo).Close();
+
             }
 
-            ClassFor2DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
+
          }
 
          Console.ReadKey();
