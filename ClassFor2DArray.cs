@@ -680,9 +680,9 @@ namespace Homework_4._8
 
             if (SearchingMultiple(lines, multiple))
             {
-               string line = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
-               Console.WriteLine(line);
-               FileAppendStringArray(line, nameFile);
+               string lineFound = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
+               Console.WriteLine(lineFound);
+               FileAppendStringArray(lineFound, nameFile);
                counterMultiple++;
             }
 
@@ -692,9 +692,9 @@ namespace Homework_4._8
 
          if (counterMultiple == 0)
          {
-            string line = "В массиве не найдено строк с элементом, кратным " + multiple;
-            Console.WriteLine(line);
-            FileAppendStringArray(line, nameFile);
+            string lineNotFound = "В массиве не найдено строк с элементом, кратным " + multiple;
+            Console.WriteLine(lineNotFound);
+            FileAppendStringArray(lineNotFound, nameFile);
          }
       }
 
