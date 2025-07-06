@@ -777,7 +777,6 @@ namespace Homework_4._8
          // Запись массива строк в файл
          string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(filePath, stringArray);
-         //File.WriteAllLines(filePath, stringArray);
       }
    }
 }
