@@ -62,7 +62,6 @@ namespace Homework_4._8
 
       static void SplittingLines(int[,] input, int multiple, string nameFile)
       {
-         // Добавить массив для строки, заполнить его значения исходного массива и передать в метод SearchingMultiple
          int[] lines = new int[input.GetLength(1)];
          int i = 0;
          while (i < input.GetLength(0))
@@ -77,7 +76,6 @@ namespace Homework_4._8
             if (SearchingMultiple(lines, multiple))
             {
                string line = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
-               //Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i + 1, multiple);
                Console.WriteLine(line);
                ClassFor2DArray.FileAppendStringArray(line, nameFile);
             }
