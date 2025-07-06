@@ -38,7 +38,7 @@ namespace Homework_4._8
             if (!File.Exists(pathTwo))
             {
                Console.WriteLine("Файл {0} не существует. Создаем новый", nameFileTwo);
-               File.Create(pathTwo);
+               File.Create(pathTwo).Close();
             }
             else
             {
