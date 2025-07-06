@@ -818,7 +818,5 @@ namespace Homework_4._8
          string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(filePath, stringArray);
       }
-
-
    }
 }
