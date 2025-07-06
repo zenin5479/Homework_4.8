@@ -21,10 +21,6 @@ namespace Homework_4._8
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
-         // Написать перегрузки методов без названия массива
-         // linewise - построчно
-         // multipleElement - кратный элемент
-         // splittingLines - разделение на строки
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
