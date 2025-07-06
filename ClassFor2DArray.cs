@@ -775,15 +775,10 @@ namespace Homework_4._8
          // в одномерный массив строк string[] для записи в файл
          Console.WriteLine("Одномерный массив строк");
          string[] stringArray = { line };
-
-
-
-
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл {0}", nameFile);
          string filePath = AppContext.BaseDirectory + nameFile;
-
-         File.AppendAllLines(filePath, stringArray);
+         //File.AppendAllLines(filePath, stringArray);
          File.WriteAllLines(filePath, stringArray);
       }
    }

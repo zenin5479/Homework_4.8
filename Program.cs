@@ -76,12 +76,10 @@ namespace Homework_4._8
 
             if (SearchingMultiple(lines, multiple))
             {
-               string res = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
+               string line = "В массиве найдена строка " + (i + 1) + " с элементом, кратным " + multiple;
                //Console.WriteLine("В массиве найдена строка {0} с элементом, кратным {1}", i + 1, multiple);
-               Console.WriteLine(res);
-
-               //File.AppendAllLines(Path.Combine(docPath, "WriteFile.txt"), lines);
-
+               Console.WriteLine(line);
+               ClassFor2DArray.FileAppendStringArray(line, nameFile);
             }
 
             Array.Clear(lines, 0, lines.Length);
