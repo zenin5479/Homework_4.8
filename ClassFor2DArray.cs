@@ -768,5 +768,23 @@ namespace Homework_4._8
          string filePath = AppContext.BaseDirectory + nameFile;
          File.WriteAllLines(filePath, arrayString);
       }
+
+      public static void FileAppendArrayString(string lines, string nameFile)
+      {
+         // Объединение одномерного массива double[]
+         // в одномерный массив строк string[] для записи в файл
+         Console.WriteLine("Одномерный массив строк");
+         string[] stringArray = { lines };
+
+
+
+
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл {0}", nameFile);
+         string filePath = AppContext.BaseDirectory + nameFile;
+
+         File.AppendAllLines(filePath, new[] { subLine });
+         //File.WriteAllLines(filePath, arrayString);
+      }
    }
 }

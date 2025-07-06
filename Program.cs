@@ -42,7 +42,7 @@ namespace Homework_4._8
          else
          {
             int[,] inputArray = ClassFor2DArray.InputArrayInt(sourceOne, rowOne, columnOne);
-            SplittingLines(inputArray, multipleElement);
+            SplittingLines(inputArray, multipleElement, nameFileTwo);
          }
 
          string pathTwo = Path.GetFullPath(nameFileTwo);
@@ -60,7 +60,7 @@ namespace Homework_4._8
          Console.ReadKey();
       }
 
-      static void SplittingLines(int[,] input, int multiple)
+      static void SplittingLines(int[,] input, int multiple, string nameFile)
       {
          // Добавить массив для строки, заполнить его значения исходного массива и передать в метод SearchingMultiple
          int[] lines = new int[input.GetLength(1)];
