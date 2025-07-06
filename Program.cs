@@ -18,9 +18,6 @@ namespace Homework_4._8
    {
       static void Main(string[] args)
       {
-         // Переводит (,) в (.)
-         //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
@@ -54,7 +51,5 @@ namespace Homework_4._8
 
          Console.ReadKey();
       }
-
-
    }
 }
