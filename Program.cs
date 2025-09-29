@@ -1,5 +1,4 @@
-﻿using LibraryFor2DArray;
-using System;
+﻿using System;
 using System.IO;
 
 // Разработать программу для обработки двумерного массива
@@ -22,22 +21,22 @@ namespace Homework_4._8
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
-         int rowOne = VariousMethods.SizeRow();
-         int columnOne = VariousMethods.SizeColumn();
-         int multipleElement = VariousMethods.MultipleElement();
+         int rowOne = MethodsForArray.SizeRow();
+         int columnOne = MethodsForArray.SizeColumn();
+         int multipleElement = MethodsForArray.MultipleElement();
 
          string pathOne = Path.GetFullPath(nameFileOne);
-         int[,] sourceOne = VariousMethods.EnterArrayInt(pathOne, nameFileOne);
+         int[,] sourceOne = MethodsForArray.EnterArrayInt(pathOne, nameFileOne);
          if (sourceOne.GetLength(0) == 0)
          {
             Console.WriteLine("Файл {0} пуст", nameFileOne);
          }
          else
          {
-            int[,] inputArray = VariousMethods.InputArrayInt(sourceOne, rowOne, columnOne);
+            int[,] inputArray = MethodsForArray.InputArrayInt(sourceOne, rowOne, columnOne);
             string pathTwo = Path.GetFullPath(nameFileTwo);
             File.Create(pathTwo).Close();
-            VariousMethods.SplittingLines(inputArray, multipleElement, nameFileTwo);
+            MethodsForArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
          }
 
          Console.ReadKey();
