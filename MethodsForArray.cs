@@ -56,7 +56,7 @@ namespace Homework_4._8
 
          return multiple;
       }
-      
+
       public static int[,] EnterArrayInt(string path, string nameFile)
       {
          // Двумерный целочисленный массив 
@@ -223,7 +223,7 @@ namespace Homework_4._8
          return false;
       }
 
-     public static void FileAppendStringArray(string line, string nameFile)
+      public static void FileAppendStringArray(string line, string nameFile)
       {
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };

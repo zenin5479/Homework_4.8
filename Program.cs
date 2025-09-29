@@ -16,7 +16,7 @@ namespace Homework_4._8
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
